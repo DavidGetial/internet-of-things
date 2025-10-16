@@ -22,20 +22,20 @@ void loop() {
 
  lcd_1.setCursor(0, 0);
   lcd_1.print("Temperatura: ");
-  lcd_1.print(temperaturaerature);
+  lcd_1.print(temperatura);
   lcd_1.print(" C");
 
   // Validaciones
-  if (temperaturaerature <= 10) {
+  if (temperatura <= 10) {
     digitalWrite(pinRojo, HIGH); 
     delay(500);    
     digitalWrite(pinRojo, LOW);
     delay(500);
     digitalWrite(Motor, LOW); 
-  } else if (temperaturaerature >= 11 && temperaturaerature <= 25) {
+  } else if (temperatura >= 11 && temperatura <= 25) {
     digitalWrite(pinRojo, LOW);   
     digitalWrite(Motor, LOW);
-  } else if (temperaturaerature >= 26) {
+  } else if (temperatura >= 26) {
     digitalWrite(pinRojo, HIGH); 
     digitalWrite(Motor, HIGH);
   }
