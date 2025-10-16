@@ -16,7 +16,7 @@ void setup() {
 void loop() {
   int sensorValue = analogRead(temperatura);
   float voltage = sensorValue * (5.0 / 1023.0);
-  float temperaturaerature = (voltage - 0.5) * 100; 
+  float temperatura = (voltage - 0.5) * 100; 
 
   lcd_1.clear();
 
